@@ -45,10 +45,7 @@ The `configuration` argument should be a plain old JavaScript object with at lea
   password,
   database
 }
-
 ```
-
-
 The full list of options can be found in the [mysql](https://github.com/mysqljs/mysql) package documentation [here](https://github.com/mysqljs/mysql#connection-options).
 
 As mentioned in the parent package's readme file, if a `log` property is provided on the `configuration` object then the `log.error()` function will be called with a message containing a reasonable stab at the cause of the error. Specifically, the following error codes are mapped to the following messages:
