@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-const murmuration = require('../../murmuration');
+const murmuration = require("murmuration-temp");  ///
 
-const Connection = require('./connection'),
-      migrationSQLMap = require('./migrationSQLMap');
+const Connection = require("./connection"),
+      migrationSQLMap = require("./migrationSQLMap");
 
 function migrate(configuration, migrationsDirectoryPath, callback) {
   Object.assign(configuration, {

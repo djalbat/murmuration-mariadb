@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const mysql = require('mysql');
+const mysql = require("mysql");
 
 const { createPool } = mysql;
 
@@ -70,38 +70,38 @@ module.exports = Connection;
 function diagnoseError(error, sql, log) {
   const { code } = error;
 
-  log.error(`Error code '${code}'...`);
+  log.error(`Error code "${code}"...`);
 
   switch(code) {
-    case 'ECONNREFUSED' :
-      log.error('The database isn\'t running, probably.');
+    case "ECONNREFUSED" :
+      log.error("The database isn't running, probably.");
       break;
 
-    case 'ENOTFOUND' :
-      log.error('The host is wrong, probably.');
+    case "ENOTFOUND" :
+      log.error("The host is wrong, probably.");
       break;
 
-    case 'ER_BAD_DB_ERROR' :
-      log.error('The database name is wrong, probably.');
+    case "ER_BAD_DB_ERROR" :
+      log.error("The database name is wrong, probably.");
       break;
 
-    case 'ER_ACCESS_DENIED_ERROR' :
-      log.error('The username or the password are wrong, probably.');
+    case "ER_ACCESS_DENIED_ERROR" :
+      log.error("The username or the password are wrong, probably.");
       break;
 
-    case 'ETIMEOUT' :
-    case 'PROTOCOL_SEQUENCE_TIMEOUT' :
-      log.error('The database server is down, probably.');
+    case "ETIMEOUT" :
+    case "PROTOCOL_SEQUENCE_TIMEOUT" :
+      log.error("The database server is down, probably.");
       break;
 
-    case 'ER_PARSE_ERROR' :
-    case 'ER_BAD_TABLE_ERROR' :
+    case "ER_PARSE_ERROR" :
+    case "ER_BAD_TABLE_ERROR" :
       const { message } = error;
 
       log.error(message);
 
       if (sql) {
-        log.error(`The offending SQL is: '${sql}'`);
+        log.error(`The offending SQL is: "${sql}"`);
       }
       break;
   }

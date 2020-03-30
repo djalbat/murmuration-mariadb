@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-const murmuration = require('murmuration-temp');  ///
+const murmuration = require("murmuration-temp");  ///
 
-const migrate = require('./bin/migrate');
+const migrate = require("./bin/migrate");
 
 const { database, transaction } = murmuration;
 
