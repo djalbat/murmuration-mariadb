@@ -1,6 +1,6 @@
 'use strict';
 
-const murmuration = require('../murmuration');
+const murmuration = require('murmuration-temp');  ///
 
 const migrate = require('./bin/migrate');
 
