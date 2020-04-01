@@ -60,6 +60,32 @@ As mentioned in the parent package's readme file, if a `log` property is provide
 
 * `ETIMEOUT` or `PROTOCOL_SEQUENCE_TIMEOUT` - `'The database server is down, probably.'`
 
+### Placeholders
+
+A variable length list of parameters can be passed between the `sql` and `callback` arguments of both the `query()` and `execute()` functions. These replace the `?` placeholders in the SQL you provide. For example, if the SQL passed to the `query()` function is the following...
+
+```
+
+  SELECT * FROM `user` WHERE `username`=? and `password`=MD5(?);
+
+```
+...then you would call the `query()` function thus:
+
+```
+const username = ... ,
+      password = ... ;
+
+query(connection, sql, username, password, (error, rows) => {
+
+  ...
+
+});
+
+```
+The `execute()` function is treated entirely similarly.
+
+For more information on placeholders and performing queries in general, see the `pg` package documentation [here](https://node-postgres.com/features/queries).
+
 ## Contact
 
 - james.smith@djalbat.com
