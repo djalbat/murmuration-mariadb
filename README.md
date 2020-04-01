@@ -60,8 +60,6 @@ As mentioned in the parent package's readme file, if a `log` property is provide
 
 * `ETIMEOUT` or `PROTOCOL_SEQUENCE_TIMEOUT` - `'The database server is down, probably.'`
 
-* `ER_PARSE_ERROR` or `ER_BAD_TABLE_ERROR` - In these cases the error code is simply echoed and the offending SQL, if there is any, will also be echoed in a separate call to the `log.error()` function.
-
 ## Contact
 
 - james.smith@djalbat.com

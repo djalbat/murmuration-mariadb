@@ -16,8 +16,8 @@ class Connection {
     return this.log;
   }
 
-  query(sql, values, callback) {
-    this.conn.query(sql, values, (error, rows) => {
+  query(sql, parameters, callback) {
+    this.conn.query(sql, parameters, (error, rows) => {
       if (error) {
         diagnoseError(error, sql, this.log);
       }
@@ -47,7 +47,7 @@ class Connection {
       pool = createPool(configuration);
     }
 
-    pool.getConnection((error, conn) => {
+    pool.getConnection((error, conn) => { ///
       const { log = defaultLog } = configuration;
 
       if (error) {
@@ -94,14 +94,14 @@ function diagnoseError(error, sql, log) {
       log.error("The database server is down, probably.");
       break;
 
-    case "ER_PARSE_ERROR" :
-    case "ER_BAD_TABLE_ERROR" :
-      const { message } = error;
+    default: {
+        const { message } = error;
 
-      log.error(message);
+        log.error(message);
 
-      if (sql) {
-        log.error(`The offending SQL is: "${sql}"`);
+        if (sql) {
+          log.error(`The offending SQL is: "${sql}"`);
+        }
       }
       break;
   }
