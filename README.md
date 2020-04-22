@@ -27,8 +27,9 @@ You can also clone the repository with [Git](https://git-scm.com/)...
 General usage instructions are given in the aforementioned parent package's readme file.
 
 ```
-const murmuration = require('murmuration-mariadb'), ///
-      { database, migrate, transaction, Connection } = murmuration,
+const murmuration = require("murmuration-mariadb"); ///
+
+const { database, migrate, transaction, Connection } = murmuration,
       { query, execute } = database;
 
 ...

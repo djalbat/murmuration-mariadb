@@ -70,7 +70,7 @@ module.exports = Connection;
 function diagnoseError(error, sql, log) {
   const { code } = error;
 
-  log.error(`Error code "${code}"...`);
+  log.error(`Error code '${code}'...`);
 
   switch(code) {
     case "ECONNREFUSED" :
@@ -100,7 +100,7 @@ function diagnoseError(error, sql, log) {
         log.error(message);
 
         if (sql) {
-          log.error(`The offending SQL is: "${sql}"`);
+          log.error(`The offending SQL is: '${sql}'`);
         }
       }
       break;
