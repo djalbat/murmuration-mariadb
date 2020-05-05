@@ -73,24 +73,24 @@ function diagnoseError(error, sql, log) {
   log.error(`Error code '${code}'...`);
 
   switch(code) {
-    case "ECONNREFUSED" :
+    case "ECONNREFUSED":
       log.error("The database isn't running, probably.");
       break;
 
-    case "ENOTFOUND" :
+    case "ENOTFOUND":
       log.error("The host is wrong, probably.");
       break;
 
-    case "ER_BAD_DB_ERROR" :
+    case "ER_BAD_DB_ERROR":
       log.error("The database name is wrong, probably.");
       break;
 
-    case "ER_ACCESS_DENIED_ERROR" :
+    case "ER_ACCESS_DENIED_ERROR":
       log.error("The username or the password are wrong, probably.");
       break;
 
-    case "ETIMEOUT" :
-    case "PROTOCOL_SEQUENCE_TIMEOUT" :
+    case "ETIMEOUT":
+    case "PROTOCOL_SEQUENCE_TIMEOUT":
       log.error("The database server is down, probably.");
       break;
 
