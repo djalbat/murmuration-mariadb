@@ -10,7 +10,7 @@
     "url": "https://github.com/djalbat/murmuration-mariadb"
   },
   "dependencies": {
-    "murmuration-temp": "^1.0.6",
+    "murmuration": "^1.0.7",
     "mysql": "^2.18.1",
     "necessary": "^4.1.3"
   },
