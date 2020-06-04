@@ -1,6 +1,6 @@
 "use strict";
 
-const murmuration = require("murmuration-temp");  ///
+const murmuration = require("murmuration");
 
 const Connection = require("./connection"),
       migrationSQLMap = require("./migrationSQLMap");
