@@ -4,12 +4,12 @@ const murmuration = require("murmuration");
 
 const Connection = require("./connection");
 
-function transaction(configuration, migrationsDirectoryPath, callback) {
+function transaction(configuration, operations, callback, context) {
   Object.assign(configuration, {
     Connection
   });
 
-  murmuration.transaction(configuration, migrationsDirectoryPath, callback);
+  murmuration.transaction(configuration, operations, callback, context);
 }
 
 module.exports = transaction;
