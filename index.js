@@ -3,13 +3,14 @@
 const murmuration = require("murmuration");
 
 const migrate = require("./bin/migrate"),
-      Connection = require("./bin/connection");
+      Connection = require("./bin/connection"),
+      transaction = require("./bin/transaction");
 
-const { database, transaction } = murmuration;
+const { database } = murmuration;
 
 module.exports = {
-  migrate,
   database,
+  migrate,
   Connection,
   transaction
 };
