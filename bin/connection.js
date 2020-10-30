@@ -58,6 +58,8 @@ class Connection {
         diagnoseError(error, sql, log);
       }
 
+      error = null;
+
       const connection = new Connection(conn, log);
 
       callback(error, connection);
