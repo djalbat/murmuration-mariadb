@@ -1,8 +1,10 @@
 "use strict";
 
-const mysql = require("mysql");
+const mysql = require("mysql"),
+      murmuration = require("murmuration");
 
-const { createPool } = mysql;
+const { createPool } = mysql,
+      { defaultLog } = murmuration;
 
 let pool = null;
 
@@ -106,14 +108,3 @@ function diagnoseError(error, sql, log) {
       break;
   }
 }
-
-function defaultLog(message) {}
-
-Object.assign(defaultLog, {
-  trace: () => {},
-  debug: () => {},
-  info: () => {},
-  warning: () => {},
-  error: () => {},
-  fatal: () => {},
-});
