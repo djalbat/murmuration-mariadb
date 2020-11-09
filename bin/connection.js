@@ -48,19 +48,17 @@ class Connection {
     }
 
     pool.getConnection((error, conn) => { ///
+      let connection = null;
+
       const { log = defaultLog } = configuration;
 
       if (error) {
         const sql = null; ///
 
-        conn = null;
-
         diagnoseError(error, sql, log);
+      } else {
+        connection = new Connection(conn, log);
       }
-
-      error = null;
-
-      const connection = new Connection(conn, log);
 
       callback(error, connection);
     });
