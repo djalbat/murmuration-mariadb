@@ -1,10 +1,7 @@
 "use strict";
 
-const mysql = require("mysql"),
-      murmuration = require("murmuration");
-
-const { createPool } = mysql,
-      { defaultLog } = murmuration;
+const { createPool } = require("mysql"),
+      { defaultLog } = require("murmuration");
 
 let pool = null;
 
