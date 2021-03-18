@@ -90,4 +90,3 @@ For more information on placeholders and performing queries in general, see the 
 ## Contact
 
 - james.smith@djalbat.com
-- http://djalbat.com
