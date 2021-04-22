@@ -56,6 +56,8 @@ class Connection {
 
         diagnoseError(error, sql, log);
       } else {
+        error = null;
+
         connection = new Connection(conn, log);
       }
 
