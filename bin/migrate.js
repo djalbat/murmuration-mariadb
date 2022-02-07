@@ -5,13 +5,13 @@ const murmuration = require("murmuration");
 const Connection = require("./connection"),
       migrationSQLMap = require("./migrationSQLMap");
 
-function migrate(configuration, migrationsDirectoryPath, callback) {
+function migrate(configuration, migrationsDirectoryPath, CustomMigrationMap, callback) {
   Object.assign(configuration, {
     Connection,
     migrationSQLMap
   });
 
-  murmuration.migrate(configuration, migrationsDirectoryPath, callback);
+  murmuration.migrate(configuration, migrationsDirectoryPath, CustomMigrationMap, callback);
 }
 
 module.exports = migrate;
