@@ -6,11 +6,12 @@ const migrate = require("./bin/migrate"),
       Connection = require("./bin/connection"),
       transaction = require("./bin/transaction");
 
-const { database } = murmuration;
+const { database, CustomMigration } = murmuration;
 
 module.exports = {
   database,
   migrate,
   Connection,
-  transaction
+  transaction,
+  CustomMigration
 };
