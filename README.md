@@ -35,6 +35,8 @@ const { database, migrate, transaction, Connection } = murmuration,
 ...
 ```
 
+This package leverages the [`mysql`](https://github.com/mysqljs/mysql) package and used its parameterised queries. This guard against SQL injection without further ado.
+
 ### Configuration
 
 The `configuration` argument should be a plain old JavaScript object with at least the following properties:
