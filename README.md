@@ -85,7 +85,7 @@ query(connection, sql, username, password, (error, rows) => {
 ```
 The `execute()` function is treated entirely similarly.
 
-For more information on placeholders and performing queries in general, see the `pg` package documentation [here](https://node-postgres.com/features/queries).
+For more information on placeholders and performing queries in general, see the `mysql` package documentation [here](https://github.com/mysqljs/mysql#performing-queries).
 
 ## Contact
 
