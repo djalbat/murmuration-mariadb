@@ -1,6 +1,6 @@
 # Murmuration for MariaDB
 
-Connections, transactions and migrations for MariaDB.
+Statements, transactions and migrations for MariaDB.
 
 This package is based largely on the following parent one:
 
