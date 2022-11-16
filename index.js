@@ -3,10 +3,10 @@
 const murmuration = require("murmuration");
 
 const using = require("./bin/using"),
-    migrate = require("./bin/migrate"),
-    Statement = require("./bin/statement"),
-    Connection = require("./bin/connection"),
-    transaction = require("./bin/transaction");
+      migrate = require("./bin/migrate"),
+      Statement = require("./bin/statement"),
+      Connection = require("./bin/connection"),
+      transaction = require("./bin/transaction");
 
 const { database, CustomMigration } = murmuration;
 
