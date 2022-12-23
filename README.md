@@ -4,7 +4,7 @@ Statements, transactions and migrations for MariaDB.
 
 This package is based largely on the following parent one:
 
-* [murmuration](https://github.com/djalbat/murmuration)
+* [Murmuration](https://github.com/djalbat/murmuration)
 
 This readme file contains a small amount of information specific to this package, however the parent package's readme file is the place to look for how to make use of this package's functionality.
 
