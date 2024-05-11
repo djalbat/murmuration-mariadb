@@ -1,7 +1,7 @@
 {
   "name": "murmuration-mariadb",
   "author": "James Smith",
-  "version": "2.0.19",
+  "version": "2.0.20",
   "license": "MIT, Anti-996",
   "homepage": "https://github.com/djalbat/murmuration-mariadb",
   "description": "Statements, transactions and migrations for MariaDB.",
@@ -10,7 +10,7 @@
     "url": "https://github.com/djalbat/murmuration-mariadb"
   },
   "dependencies": {
-    "murmuration": "^2.0.15",
+    "murmuration": "^2.0.16",
     "mysql": "^2.18.1"
   },
   "devDependencies": {},
