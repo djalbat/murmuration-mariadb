@@ -91,4 +91,4 @@ For more information on placeholders and performing queries in general, see the 
 
 ## Contact
 
-- james.smith@djalbat.com
+* james.smith@djalbat.com
