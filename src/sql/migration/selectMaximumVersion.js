@@ -6,4 +6,4 @@ const selectMaximumVersionMigrationSQL = `
 
 `;
 
-module.exports = selectMaximumVersionMigrationSQL;
+export default selectMaximumVersionMigrationSQL;

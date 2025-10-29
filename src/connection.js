@@ -1,11 +1,11 @@
 "use strict";
 
-const { createPool } = require("mysql"),
-      { defaultLog } = require("murmuration");
+export { createPool } from "mysql";
+export { defaultLog } from "murmuration";
 
 let pool = null;
 
-class Connection {
+export default class Connection {
   constructor(conn, log) {
     this.conn = conn;
     this.log = log;
@@ -65,8 +65,6 @@ class Connection {
     });
   }
 }
-
-module.exports = Connection;
 
 function diagnoseError(error, sql, log) {
   const { code } = error;

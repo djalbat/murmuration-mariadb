@@ -6,4 +6,4 @@ const insertVersionMigrationSQL = `
 
 `;
 
-module.exports = insertVersionMigrationSQL;
+export default insertVersionMigrationSQL;

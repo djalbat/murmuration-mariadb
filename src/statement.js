@@ -1,10 +1,10 @@
 "use strict";
 
-const { Statement: BaseStatement, caseUtilities } = require("murmuration");
+import { Statement as BaseStatement, caseUtilities } from "murmuration";
 
 const { camelCaseToSnakeCase, snakeCaseToCamelCase } = caseUtilities;
 
-class Statement extends BaseStatement {
+export default class Statement extends BaseStatement {
   update(relation) {
     const sql = `UPDATE \`${relation}\``;
 
@@ -80,5 +80,3 @@ class Statement extends BaseStatement {
     return statement;
   }
 }
-
-module.exports = Statement;

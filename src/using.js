@@ -1,11 +1,9 @@
 "use strict";
 
-const Statement = require("./statement");
+import Statement from "./statement";
 
-function using(connection) {
+export default function using(connection) {
   const statement = Statement.fromConnection(connection);
 
   return statement;
 }
-
-module.exports = using;

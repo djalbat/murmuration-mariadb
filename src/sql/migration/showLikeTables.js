@@ -6,4 +6,4 @@ const showLikeTablesMigrationSQL = `
 
 `;
 
-module.exports = showLikeTablesMigrationSQL;
+export default showLikeTablesMigrationSQL;
