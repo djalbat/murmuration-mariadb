@@ -1,6 +1,6 @@
 "use strict";
 
-import murmuration from "murmuration";
+import { migrate as baseMigrate } from "murmuration";
 
 import Connection from "./connection";
 import migrationSQLMap from "./migrationSQLMap";
@@ -11,5 +11,5 @@ export default function migrate(configuration, migrationsDirectoryPath, CustomMi
     migrationSQLMap
   });
 
-  murmuration.migrate(configuration, migrationsDirectoryPath, CustomMigrationMap, callback);
+  baseMigrate(configuration, migrationsDirectoryPath, CustomMigrationMap, callback);
 }
