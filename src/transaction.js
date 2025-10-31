@@ -1,6 +1,6 @@
 "use strict";
 
-import murmuration from "murmuration";
+import { transaction as baseTransaction } from "murmuration";
 
 import Connection from "./connection";
 
@@ -9,5 +9,5 @@ export default function transaction(configuration, operations, callback, context
     Connection
   });
 
-  murmuration.transaction(configuration, operations, callback, context);
+  baseTransaction(configuration, operations, callback, context);
 }
