@@ -1,7 +1,8 @@
 "use strict";
 
-export { createPool } from "mysql";
-export { defaultLog } from "murmuration";
+import { createPool } from "mysql";
+
+import { defaultLog } from "murmuration";
 
 let pool = null;
 
